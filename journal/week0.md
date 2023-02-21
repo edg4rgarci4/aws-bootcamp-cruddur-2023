@@ -36,4 +36,69 @@
 
 
 ## Homework Challenges
-- import work later
+
+### Suggested:
+- Destroy your root account credentials, Set MFA, IAM role
+  - I didn’t “destroy” the root account credentials but I enabled a hardware MFA key for it and stashed that away safely. I created an IAM User with administrative rights to use. 
+- Use EventBridge to hookup Health Dashboard to SNS and send notification when there is a service health issue.
+  - I did this with awscli commands in GitPod. More proof of credentials  🙂 
+  - ![EventBridge AWS Health Alert](https://github.com/edg4rgarci4/aws-bootcamp-cruddur-2023/blob/main/journal/assets/Week%200%20Homework%20Challenge%20EventBridge%20Health%20Alerts.png?raw=true)
+### Own:
+- Added some security detail to the architecture and conceptual diagrams. I was curious about how this may be documented as I don’t have much experience with diagrams. This led me to this documentation from AWS <https://d1.awsstatic.com/whitepapers/Security/DDoS_White_Paper.pdf> that I took more time to read on. 
+
+- I thought it would be fitting to read up on “[Changes to AWS Billing, Cost Management, and Account Consoles Permissions](https://aws.amazon.com/blogs/aws-cloud-financial-management/changes-to-aws-billing-cost-management-and-account-consoles-permissions/)” as I noticed that banner and its relevant to week 0’s topic. I Had created a “BudgetFullAccess” policy that I modified with the JSON below after reading the AWS blog post: 
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "ThesePermissionsWillHaveNoEffectTillEndOfMigration",
+            "Effect": "Allow",
+            "Action": [
+                "ce:Get*",
+                "ce:Describe*",
+                "ce:List*",
+                "account:GetAccountInformation",
+                "billing:Get*",
+                "payments:List*",
+                "payments:Get*",
+                "tax:List*",
+                "tax:Get*",
+                "consolidatedbilling:Get*",
+                "consolidatedbilling:List*",
+                "invoicing:List*",
+                "invoicing:Get*",
+                "cur:Get*",
+                "cur:Validate*",
+                "freetier:Get*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "ThisPermissionWillContinueProvidingAccessAsNormal",
+            "Effect": "Allow",
+            "Action": [
+                "aws-portal:ViewBilling",
+                "aws-portal:ModifyBilling",
+                "budgets:ViewBudget",
+                "budgets:ModifyBudget"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Action": [
+                "cloudwatch:*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        },
+        {
+            "Action": [
+                "sns:*"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}
+```
