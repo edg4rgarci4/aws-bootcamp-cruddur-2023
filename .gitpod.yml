@@ -2,7 +2,6 @@ tasks:
   - name: update os
   - init: |
       sudo apt update && sudo apt upgrade -y
-      sudo apt --purge autoremove
   - name: aws-cli
     env:
       AWS_CLI_AUTO_PROMPT: on-partial
@@ -12,6 +11,14 @@ tasks:
       unzip awscliv2.zip
       sudo ./aws/install
       cd $THEIA_WORKSPACE_ROOT
+  - name: init workspace
+    init: |
+      gp sync-await apt-npm
+      cd $THEIA_WORKSPACE_ROOT/backend-flask
+      pip3 install -r requirements.txt
+      cd $THEIA_WORKSPACE_ROOT/frontend-react-js
+      npm i
+      cd $THEIA_WORKSPACE_ROOT      
   - name: postgres
     init: |
       curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
