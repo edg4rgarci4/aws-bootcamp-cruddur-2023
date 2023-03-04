@@ -16,22 +16,22 @@
   -  Done
 - Containerize Application (Dockerfiles, Docker Compose)
   - Followed along week livestream
-  - Screenshot here
+  - Commit is [here](https://github.com/edg4rgarci4/aws-bootcamp-cruddur-2023/commit/bfad7c1e92c8ef890aed5d60390daed9ccd80246).
 - Document the Notification Endpoint for the OpenAI Document
   - Followed along the "Week 1 - Create the notification feature (Backend and Front)" video and did this. 
-  - Screenshot here 
+  - Commit is [here](https://github.com/edg4rgarci4/aws-bootcamp-cruddur-2023/commit/ba0e2fe4ffe0a8c15b1c6d80869a1044d1828fac).
 - Write a Flask Backend Endpoint for Notifications
   - Followed along the "Week 1 - Create the notification feature (Backend and Front)" video and did this. 
-  - Screenshot here
+  - Commit is [here](https://github.com/edg4rgarci4/aws-bootcamp-cruddur-2023/commit/f9f352c38fc4d7f9b669701babfbb317df1db80e).
 - Write a React Page for Notifications
   - Followed along the "Week 1 - Create the notification feature (Backend and Front)" video and did this.
-  - Screenshot here
+  - Commit is [here](https://github.com/edg4rgarci4/aws-bootcamp-cruddur-2023/commit/18a775bf47bc7889e0d648d8c1d5a3affd123bae). 
 - Run DynamoDB Local Container and ensure it works
   - Watched "Week 1 - DynamoDB and Postgres vs Docker" and followed along
-  - Screenshot here
+  - ![DynamoDB Local Container](https://github.com/edg4rgarci4/aws-bootcamp-cruddur-2023/blob/main/journal/assets/Week%201%20Run%20DynamoDB%20Local%20Container.png?raw=true)
 - Run Postgres Container and ensure it works
   - Watched "Week 1 - DynamoDB and Postgres vs Docker" and followed along
-  - Screenshot here
+  - ![Postgres Container](https://github.com/edg4rgarci4/aws-bootcamp-cruddur-2023/blob/main/journal/assets/Week%201%20Run%20Postgres%20Container.png?raw=true)
 ## Homework Challenges
 
 ### Suggested:
