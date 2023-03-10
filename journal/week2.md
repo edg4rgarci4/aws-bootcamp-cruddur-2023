@@ -23,11 +23,14 @@
 - Integrate Rollbar and capture and error ✅	
   - Followed along [Week 2 - Rollbar](https://www.youtube.com/watch?v=xMBDAb5SEU4&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=35) video.
   - Commits are [here](https://github.com/edg4rgarci4/aws-bootcamp-cruddur-2023/commit/04d8c233c937d150a6b3a38ba3d8d1e35c061bd8) and [here](https://github.com/edg4rgarci4/aws-bootcamp-cruddur-2023/commit/2d08f15a088ef00566f6ec4d4cc167f4da74ee72).
+  - ![Rollbar New UI](https://user-images.githubusercontent.com/47645008/224196902-34166508-9536-426f-9ee0-e08aa769a4fd.png)
 	
 ## Homework Challenges
 
 ### Suggested:
--
+- Instrument Honeycomb for the frontend-application to observe network latency between frontend and backend[HARD]
+- Add custom instrumentation to Honeycomb to add more attributes eg. UserId, Add a custom span ✅
+- Run custom queries in Honeycomb and save them later eg. Latency by UserID, Recent Traces ✅
 ### Own:
-- Further research on Honeycomb vs Datadog
-  - This was covered a bit in the livestream (around 1hr45min mark). Other than signing up for the account I hadn’t really heard of Honeycomb. I do have a little experience with Datadog so I ended up coming across this page and spent time reading it https://info.honeycomb.io/competitor-datadog.   
+- More research on Observability and OTEL
+  - I poked around [Honeycomb's Youtube channel](https://www.youtube.com/@honeycombio). It was also good to spend time learning more about [OTEL](https://opentelemetry.io/). They had a video ([Instrumenting With OpenTelemetry](https://www.youtube.com/watch?v=Fb29Pw07gcY)) about this too. Lastly, I enjoyed watching and [Observability and the Glorious Future - Charity Majors](https://www.youtube.com/watch?v=babigcvGAXo) to build up and cement things that were covered by [Jessica](https://twitter.com/jessitron). I plan to watch [AWS re:Invent 2022 - Observability best practices at Amazon (COP343)](https://www.youtube.com/watch?v=zZPzXEBW4P8) next. 
