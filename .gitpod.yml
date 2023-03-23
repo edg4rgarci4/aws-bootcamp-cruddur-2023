@@ -1,7 +1,7 @@
 tasks:
-  - name: update os
-    before: |
-      sudo apt update && sudo apt upgrade -y
+#  - name: update os
+#    before: |
+#      sudo apt update && sudo apt upgrade -y
   - name: aws-cli
     env:
       AWS_CLI_AUTO_PROMPT: on-partial
